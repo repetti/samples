@@ -13,12 +13,18 @@ import org.slf4j.LoggerFactory;
 import java.net.InetSocketAddress;
 
 /**
+ * The class starts NettyServer in constructor, that implements Calculator interface
+ * as defined in 'calc.avpr' file.
+ *
  * Date: 13/05/15
  */
 public class MainServer {
     private static final Logger log = LoggerFactory.getLogger(MainServer.class);
     private final Server server;
 
+    /**
+     * Starts new NettyServer, that implements Calculator interface from 'calc.avpr' file.
+     */
     public MainServer() {
         log.info("Starting");
         server = new NettyServer(
@@ -26,11 +32,17 @@ public class MainServer {
         log.info("Started");
     }
 
+    /**
+     * Stops the server
+     */
     public void stop() {
         server.close();
     }
 
-    public static class CalcImpl implements Calculator {
+    /**
+     * Very simple implementation of Calculator interface
+     */
+    private static class CalcImpl implements Calculator {
         public Result send(Task task) {
             log.info("Got task: {}", task);
             final int a = task.getFirst();

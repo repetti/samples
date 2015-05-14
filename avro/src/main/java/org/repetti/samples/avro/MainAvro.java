@@ -21,22 +21,26 @@ public class MainAvro {
     public static void main(String... args) throws IOException {
         final String text = "my comment";
 
+        // Start server first, then client
         MainServer server = new MainServer();
         MainClient client = new MainClient();
 
         log.info("Everything ready");
 
+        // creating new message to be sent
         Task task = new Task();
         task.setFirst(12);
         task.setSecond(1024);
         task.setComment(new Utf8(text));
         log.info("Task ready: {}", task.toString());
 
+        // sending a mesage and getting a result
         Result result = client.getProxy().send(task);
 
         log.info("Server returned: {}", result);
         log.info("Cleanup");
 
+        //stopping client and server
         client.close();
         server.stop();
 

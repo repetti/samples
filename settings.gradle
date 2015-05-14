@@ -1,3 +1,6 @@
 include 'JavaMail'
 
 include 'avro'
+include 'hazelcast'
+include 'neo4j'
+include 'orientdb'

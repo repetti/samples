@@ -1,0 +1,30 @@
+group 'org.repetti.samples'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+//mainClassName = "org.repetti.samples.neo4j.MainNeo4j"
+
+sourceCompatibility = 1.5
+
+repositories {
+    jcenter()
+}
+
+def neo4j_version = '2.2+'
+
+dependencies {
+
+    //tag::jdbc-dependency
+    compile group: 'org.neo4j', name: 'neo4j', version: neo4j_version
+
+    compile group: 'org.neo4j', name: 'neo4j-kernel', version: neo4j_version
+    compile group: 'com.sun.jersey', name: 'jersey-client', version: '1.9'
+
+    compile group: 'org.neo4j.app', name: 'neo4j-server', version: neo4j_version
+//    providedCompile group: 'org.neo4j.app', name: 'neo4j-server', version: neo4j_version
+//    testCompile group: 'org.neo4j.app', name: 'neo4j-server', version: neo4j_version
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
