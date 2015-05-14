@@ -1,0 +1,36 @@
+plugins {
+    // using https://github.com/commercehub-oss/gradle-avro-plugin
+    id "com.commercehub.gradle.plugin.avro" version "0.3.4"
+}
+
+apply plugin: 'java'
+
+sourceCompatibility = "1.6"
+targetCompatibility = "1.6"
+
+version = '1.0'
+
+project.ext {
+    avro_version = '1.7.6'
+    slf4j_version = '1.7.+'
+}
+
+avro {
+    //charSequence, string (the default), or utf8.
+    stringType = "utf8"
+    encoding = "UTF-8"
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile group: 'org.slf4j', name: 'slf4j-api', version: slf4j_version
+    runtime group: 'org.slf4j', name: 'slf4j-simple', version: slf4j_version
+
+    compile group: 'org.apache.avro', name: 'avro', version: avro_version
+    compile group: 'org.apache.avro', name: 'avro-ipc', version: avro_version
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}

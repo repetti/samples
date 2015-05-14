@@ -1,0 +1,49 @@
+{
+  "namespace": "org.repetti.samples.avro.generated",
+  "protocol": "Calculator",
+  "types": [
+    {
+      "name": "Task",
+      "type": "record",
+      "fields": [
+        {
+          "name": "first",
+          "type": "int"
+        },
+        {
+          "name": "second",
+          "type": "int"
+        },
+        {
+          "name": "comment",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "Result",
+      "type": "record",
+      "fields": [
+        {
+          "name": "sum",
+          "type": "int"
+        },
+        {
+          "name": "comment",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "messages": {
+    "send": {
+      "request": [
+        {
+          "name": "task",
+          "type": "Task"
+        }
+      ],
+      "response": "Result"
+    }
+  }
+}
