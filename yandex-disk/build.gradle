@@ -1,0 +1,28 @@
+group 'org.repetti.samples'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.6
+
+repositories {
+    jcenter()
+}
+
+project.ext {
+    oltu_version = '1.0.+'
+    slf4j_version = '1.7.+'
+    junit_version = '4.11'
+}
+
+dependencies {
+    compile group: 'org.apache.oltu.oauth2', name: 'org.apache.oltu.oauth2.client', version: oltu_version
+//    compile group: 'org.springframework', name: 'spring-web'
+//    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind'
+
+    compile group: 'org.slf4j', name: 'slf4j-api', version: slf4j_version
+
+    testCompile group: 'junit', name: 'junit', version: junit_version
+    testRuntime group: 'org.slf4j', name: 'slf4j-api', version: slf4j_version
+}

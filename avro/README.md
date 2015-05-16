@@ -9,3 +9,4 @@ for classes defined in '*.avpr' files.
 ### See
 * https://avro.apache.org/
 * https://en.wikipedia.org/wiki/Apache_Avro
+* http://ganges.usc.edu/pgroupW/images/a/a9/Serializarion_Framework.pdf serialization framework overview
