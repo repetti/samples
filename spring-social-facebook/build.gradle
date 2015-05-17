@@ -18,11 +18,17 @@ project.ext {
 
 dependencies {
 
+    compile("org.springframework:spring-web")
+    compile("com.fasterxml.jackson.core:jackson-databind")
+
     compile group: 'org.springframework.social', name: 'spring-social-facebook', version: spring_social_facebook_version
-    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind'
+    compile "org.springframework.social:spring-social-core:1.1.0.RELEASE"
+    compile "org.springframework.social:spring-social-web:1.1.0.RELEASE"
+//    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind'
 
     compile group: 'org.slf4j', name: 'slf4j-api', version: slf4j_version
 
+    runtime group: 'org.slf4j', name: 'slf4j-simple', version: slf4j_version
+
     testCompile group: 'junit', name: 'junit', version: junit_version
-    testRuntime group: 'org.slf4j', name: 'slf4j-api', version: slf4j_version
 }
