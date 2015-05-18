@@ -10,3 +10,6 @@ for classes defined in '*.avpr' files.
 * https://avro.apache.org/
 * https://en.wikipedia.org/wiki/Apache_Avro
 * http://ganges.usc.edu/pgroupW/images/a/a9/Serializarion_Framework.pdf serialization framework overview
+* https://cwiki.apache.org/confluence/display/AVRO/FAQ
+* https://stackoverflow.com/questions/13351334/avro-gradle-plugin-sample-usage
+* https://github.com/commercehub-oss/gradle-avro-plugin
