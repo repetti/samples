@@ -1,0 +1,31 @@
+group 'org.repetti.samples'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+mainClassName = 'org.repetti.samples.hsqldb.Main'
+
+repositories {
+    jcenter()
+}
+
+project.ext {
+    hsqldb_version = '2.3.2'
+    slf4j_version = '1.7.+'
+    junit_version = '4.11'
+}
+
+dependencies {
+
+    compile group: 'org.slf4j', name: 'slf4j-api', version: slf4j_version
+    compile group: 'org.hsqldb', name: 'hsqldb', version: hsqldb_version
+//    compile group: 'org.hsqldb', name: 'sqltool', version: hsqldb_version
+
+    runtime group: 'org.slf4j', name: 'slf4j-simple', version: slf4j_version
+
+    testCompile group: 'junit', name: 'junit', version: junit_version
+}
