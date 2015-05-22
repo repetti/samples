@@ -1,0 +1,22 @@
+version 'unspecified'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.7
+
+repositories {
+    jcenter()
+}
+
+project.ext {
+    slf4j_version = '1.7.+'
+    junit_version = '4.11'
+}
+
+dependencies {
+    compile group: 'org.slf4j', name: 'slf4j-api', version: slf4j_version
+
+    runtime group: 'org.slf4j', name: 'slf4j-simple', version: slf4j_version
+
+    testCompile group: 'junit', name: 'junit', version: junit_version
+}

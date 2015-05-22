@@ -25,7 +25,7 @@ public class MainClient {
      */
     public MainClient() throws IOException {
         log.info("Client stating");
-        this.client = new NettyTransceiver(new InetSocketAddress(9999));
+        this.client = new NettyTransceiver(new InetSocketAddress(Constants.PORT));
         this.proxy = SpecificRequestor.getClient(Calculator.class, client);
         log.info("Client started, proxy obtained");
     }

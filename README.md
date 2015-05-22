@@ -7,6 +7,10 @@ Each subproject contains a readme file, describing it.
 * [Standard Markdown](http://daringfireball.net/projects/markdown/)
 * [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)
 
+## Git
+* https://rogerdudler.github.io/git-guide/
+* update master to origin/master: git push . origin/master:master
+
 ## Gradle
 * https://github.com/gradle/gradle
 * https://plugins.gradle.org/

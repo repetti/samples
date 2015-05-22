@@ -28,7 +28,7 @@ public class MainServer {
     public MainServer() {
         log.info("Starting");
         server = new NettyServer(
-                new SpecificResponder(Calculator.class, new CalcImpl()), new InetSocketAddress(9999));
+                new SpecificResponder(Calculator.class, new CalcImpl()), new InetSocketAddress(Constants.PORT));
         log.info("Started");
     }
 

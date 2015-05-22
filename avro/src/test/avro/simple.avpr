@@ -1,0 +1,17 @@
+{
+  "namespace": "org.repetti.samples.avro.generated",
+  "protocol": "Simple",
+  "types": [
+  ],
+  "messages": {
+    "send": {
+      "request": [
+        {
+          "name": "msg",
+          "type": "string"
+        }
+      ],
+      "response": "string"
+    }
+  }
+}
