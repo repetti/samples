@@ -1,0 +1,23 @@
+group 'org.repetti.samples'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.6
+
+repositories {
+    jcenter()
+}
+
+project.ext {
+    slf4j_version = '1.7.+'
+    junit_version = '4.11'
+}
+
+dependencies {
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: slf4j_version
+
+    testCompile group: 'junit', name: 'junit', version: junit_version
+    testRuntime group: 'org.slf4j', name: 'slf4j-simple', version: slf4j_version
+}

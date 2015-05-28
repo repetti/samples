@@ -15,3 +15,6 @@ include 'yandex-disk'
 include 'vk'
 
 //findProject(':module-name')?.name = 'custom-name'
+include 'james'
+include 'telegram'
+

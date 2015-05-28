@@ -3,6 +3,12 @@ Examples of using various java frameworks or technologies.
 
 Each subproject contains a readme file, describing it.
 
+# XMPP
+* https://xmpp.org/xmpp-software/libraries/
+* https://igniterealtime.org/projects/smack/
+* http://babbler-xmpp.blogspot.de/
+* https://cloud.google.com/appengine/docs/java/xmpp/
+
 ## Markdown
 * [Standard Markdown](http://daringfireball.net/projects/markdown/)
 * [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)

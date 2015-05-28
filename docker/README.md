@@ -13,7 +13,7 @@ sudo apt-get install lxc-docker
 sudo docker run -i -t ubuntu /bin/bash
 ```
 
-* Add user to docker group (https://docs.docker.com/installation/debian/)
+* Add user to docker group (https://docs.docker.com/installation/debian/ https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo)
 ```
 groupadd docker
 sudo gpasswd -a ${USER} docker
@@ -27,9 +27,14 @@ service docker restart
  https://github.com/jpetazzo/dockvpn
  https://github.com/kylemanna/docker-openvpn
 
+### GUI containers
+* https://github.com/fgrehm/docker-intellij
+* https://github.com/fgrehm/docker-eclipse
+* https://github.com/fgrehm/docker-netbeans
+
+
 ### See
 * https://docker.com/
 * https://en.wikipedia.org/wiki/Docker_%28software%29
 * http://ganges.usc.edu/pgroupW/images/a/a9/Serializarion_Framework.pdf serialization framework overview
-
-
+* https://en.wikipedia.org/wiki/Operating-system-level_virtualization#IMPLEMENTATIONS
