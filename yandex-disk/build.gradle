@@ -24,5 +24,7 @@ dependencies {
     compile group: 'org.slf4j', name: 'slf4j-api', version: slf4j_version
 
     testCompile group: 'junit', name: 'junit', version: junit_version
-    testRuntime group: 'org.slf4j', name: 'slf4j-api', version: slf4j_version
+    runtime group: 'org.slf4j', name: 'slf4j-simple', version: slf4j_version
+
+    compile 'com.yandex.android:disk-restapi-sdk:1.0'
 }
