@@ -1,0 +1,32 @@
+group 'org.repetti.samples'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.7
+
+repositories {
+    jcenter()
+}
+
+project.ext {
+    smack_version = '4.2.+'
+    slf4j_version = '1.7.+'
+    junit_version = '4.11'
+}
+
+dependencies {
+    compile group: 'org.igniterealtime.smack', name: 'smack-java7', version: smack_version
+    compile group: 'org.igniterealtime.smack', name: 'smack-tcp', version: smack_version
+    compile group: 'org.igniterealtime.smack', name: 'smack-im', version: smack_version
+//    compile group: 'org.springframework', name: 'spring-web'
+//    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind'
+
+    compile group: 'org.slf4j', name: 'slf4j-api', version: slf4j_version
+
+    testCompile group: 'junit', name: 'junit', version: junit_version
+    runtime group: 'org.slf4j', name: 'slf4j-simple', version: slf4j_version
+
+    compile 'com.yandex.android:disk-restapi-sdk:1.0'
+}
